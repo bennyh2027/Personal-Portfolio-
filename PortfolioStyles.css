@@ -1,0 +1,392 @@
+* {
+    margin: 0; 
+    padding: 0; 
+}
+
+html {
+    scroll-behavior: smooth;
+    /* This makes it so that when you click the navbar links, it scrolls down smoothly 
+    instead of feeling like the screen is teleporting there */
+}
+
+#Profile, #aboutSection, #experienceSection, #contactSection {
+    scroll-margin-top: 100px; 
+    /* This is what helps to keep the section in the center when you 
+    click the link. When you press the links, it scrolls down but it's doesn't end off in the center. 
+    Scroll-margin-top fixes this by changing the top margin to change where the scroll ends*/
+}
+
+#projectsSection{
+    scroll-margin-top: 200px; 
+}
+
+/* The container is so everything is centered and is scrollable instead of having to do 
+that separately for each one */
+#container{ 
+    text-align: center; 
+    overflow-y: auto; 
+    position: relative;  
+}
+
+
+/* --------------- Navigation Menu ----------------*/
+#navbar{
+    height: 3.5vh; 
+    background-color: black; 
+    font-family: Trebuchet MS;  
+    font-weight: bolder; 
+    padding-top: 20px; 
+    color: white; 
+    position: fixed;
+    width: 100%;
+    z-index: 100; /* things with higher z index appear above other elements. Like Wrap Text */
+   
+}
+
+#navbar a{
+    text-decoration: none !important;
+    color: white; 
+    margin-right: 7%;  
+    transition: all 0.35s ease-out;
+}
+
+#navbar a:hover{
+    border-radius: 5px; 
+    background-color: #fccb06; 
+    padding: 5px; 
+    color: black; 
+    transition: .3s ease-in;
+}
+
+/* ------------- Profile Picture ---------------- */
+#Profile{
+    height: 65%; 
+    margin-left: -2%; 
+    padding-top: 15%;
+}
+
+
+/* ------------------ Content Information for Home Page ------------*/
+
+#Content{
+    font-family: Tahoma; 
+    color: #435B66; 
+    margin-left: auto;
+}
+
+#Content h1{
+    padding-top: 2%; 
+}
+
+#Content h2{
+    padding-top: 10px; 
+}
+
+#Content h3{
+    padding-top: 10px; 
+    color: #27374D; 
+}
+
+/* ---------------- About Me -----------------------*/ 
+#aboutSection{ 
+    background-color: whitesmoke;  
+    height: auto; 
+    padding-right: 30px;
+    padding-left: 30px;  
+}
+
+#aboutSectionContentBox{
+    font-family: georgia; 
+    background-color: floralwhite;  
+    box-shadow: 15px 5px 15px -2px black; 
+    border-radius: 0px 25px 25px 0px; 
+    color: black; 
+    height: auto; 
+    width: auto; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 3%; 
+    padding: 15px; 
+    line-height: 130%;
+    transition: all 0.35s ease; 
+}
+
+#aboutSectionContentBox:hover{
+    box-shadow: 20px 10px 20px -2px navajowhite; 
+    transition: .35s; 
+    opacity: 0.9;
+}
+
+
+#AboutMePic{
+    height: 20%; 
+    width: auto; 
+    border-radius: 40px; 
+}
+
+/*-------------------My Experience-------------------*/
+
+#experienceSection{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;  
+    color: white; 
+    height: auto; 
+    width: 100%; 
+    padding-top: 70px;
+    background-color: black; 
+    background-image: url("https://wallpapers.com/images/hd/coding-background-9izlympnd0ovmpli.jpg");
+    position: relative; 
+}
+
+#experienceSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black; 
+    opacity: 0.5;  
+    z-index: 1;
+}
+
+#Content1{
+    max-width: 300px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-bottom: 1rem; 
+    line-height: 1.5rem; 
+    position: relative; 
+    z-index: 2; 
+}
+
+#Content2{ 
+    background-color: white; 
+    color: black;  
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 20px; 
+    border-radius: 20px; 
+    width: 80%;  
+    position: relative; 
+    z-index: 2; 
+}
+
+#Content2 i{
+    font-size: 5rem; 
+}
+
+#Content2 img{
+    max-height: 5rem; 
+    max-width: 20rem; 
+}
+
+/*-------------------My Projects-------------------*/
+
+#projectsSection{
+    background-color: white; 
+    height: auto; 
+    width: 100%; 
+    display: grid; 
+    grid-template-columns: auto; 
+    gap: 10px; 
+}
+
+#projectsSection>div{
+    font-family: Georgia; 
+    background-color: black; 
+    color: white; 
+    font-size: 1rem; 
+    border-radius: 15px;
+    height: auto; 
+    width: 85%; 
+    padding: 0.5rem;  
+    margin-left: auto; 
+    margin-right: auto; 
+    line-height: 23px;
+}
+
+#projectsSection>div a{
+    text-decoration: none !important; 
+    color: blue; 
+}
+
+#projectsSection i{
+    font-size: 125px; 
+}
+
+/*-------------------Contact-------------------*/
+
+#contactSection{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    background-color: gainsboro; 
+    height: auto; 
+    width: 100%; 
+    color: black; 
+    padding-top: 1.5rem; 
+}
+
+#contactSection i{
+    font-size: 125px; 
+}
+
+#contactSection h2{
+    font-family: verdana; 
+}
+
+/* ------------------ Socials --------------- */
+
+#socialSection{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #191919; 
+    width: 100%; 
+    height: auto;  
+}
+
+#Content3{
+    background-color: none; 
+    color: white;
+    margin-left: auto; 
+    margin-right: auto; 
+    height: auto; 
+    width: 80%; 
+}
+
+#socialSection a{
+    text-decoration: none !important; 
+}
+
+#socialSection a i{
+    font-size: 50px;  
+    background-color: dimgray;
+    border-radius: 5px;
+}
+
+/* All media queries, max-width when building desktop to mobile and min-width
+for mobile to desktop. Put media queries at bottom to override base css */
+/*---------------------------------------------------------------*/
+
+/* 390px for iphone 12 pro */
+@media (min-width: 390px) {
+    #container{
+        max-width: auto; 
+    }
+
+    #navbar a{
+        font-size: 11px;
+    }
+
+    #Content h1{
+        font-size: 3em;
+    }
+
+    #Content h2{
+        font-size: 1.5em;
+    }
+
+    #Content h3{
+        font-size: 0.8em;
+    }
+
+    .aboutSectionContentBox{
+        width: 85%; 
+    }
+}
+/* 475px to account for iphone xr, iphone 14 pro max, ... */
+@media (min-width: 475px) {
+    #navbar a{
+        font-size: 13px;
+    }
+
+    #Content1{
+        max-width: 400px; 
+    }
+}
+
+/* 768px to account for ipad mini and ohter bigger ipads */ 
+@media (min-width: 768px) {
+    #navbar a{
+        font-size: 16px;
+        margin-left: 2%; 
+    }
+
+    #Profile{
+        padding-top: 10%; 
+    }
+
+    #aboutSection{
+        height: 80%; 
+    }
+
+    #aboutSectionContentBox{
+        width: 60%; 
+        height: auto; 
+    }
+
+    #AboutMePic{
+        height: 35%; 
+    }
+
+    #Content1{
+        max-width: 500px; 
+    }
+
+    #Content2{ 
+        max-width: 32rem;  
+    }
+
+    #projectsSection>div{
+        max-width: 40rem; 
+    }
+
+}
+
+/* 1024px to account for ipad pro */ 
+@media (min-width: 1024px) {
+    #navbar a{
+        margin-left: auto; 
+    }
+
+    #Profile{
+        padding-top: 7%; 
+    }
+
+    #aboutSection{
+        height: 70%; 
+    }
+    
+    #projectsSection{
+        display: grid; 
+        grid-template-columns: auto auto auto; 
+        width: auto; 
+        height: auto; 
+        gap: 5px; 
+    }
+
+    #contactSection h4{
+        max-width: 35rem; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+    
+}
+
+/* 1280px to account for most laptop screens */ 
+@media (min-width: 1280px) {
+    #navbar a{
+        margin-left: -2%; 
+    }
+
+    #aboutSection{
+        height: 65%; 
+    }
+
+    #aboutSectionContentBox{
+        width: 45%; 
+        height: auto; 
+    }
+
+    #Content1{
+        max-width: 650px; 
+    }
+
+}
