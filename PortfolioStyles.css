@@ -263,7 +263,21 @@ that separately for each one */
 
 /* All media queries, max-width when building desktop to mobile and min-width
 for mobile to desktop. Put media queries at bottom to override base css */
+
+/* for best website responsiveness, small phones are usually 320 width 568 height, standard phones are 375 width 667 height, tablets and ipads: 768width 800 height, and 
+laptops: 1280 width 900 height. 
 /*---------------------------------------------------------------*/
+
+/*320px for much smaller phones */ 
+@media (min-width: 320px) {
+    #navbar a{
+        font-size: 9px;
+    }
+
+    #aboutSectionContentBox h1{
+        line-height: 2rem;
+    }
+}
 
 /* 390px for iphone 12 pro */
 @media (min-width: 390px) {
@@ -388,5 +402,5 @@ for mobile to desktop. Put media queries at bottom to override base css */
     #Content1{
         max-width: 650px; 
     }
-
+    
 }
