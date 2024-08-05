@@ -178,5 +178,21 @@
         </div>    
 
     </body>
+    <script>
 
+		document.addEventListener('contextmenu', function(stopRightClick) 
+		{
+  			stopRightClick.preventDefault();
+		});
+
+		document.addEventListener('keydown', function(stopCtrlU) 
+		{
+  			if (stopCtrlU.ctrlKey && (stopCtrlU.key === 'u' || stopCtrlU.key === 'U')) 
+			{
+    			stopCtrlU.preventDefault();
+  			}
+		}); /*this code is used so that a user cant right click or press ctrl u to view my code casually. 
+			Prevents someone from being able to take code */
+
+	</script>
 </html> 
