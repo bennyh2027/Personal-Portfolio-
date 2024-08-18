@@ -86,7 +86,7 @@
                         <i class='bx bxs-data' undefined ></i>
                         <i class='bx bxs-parking' style='color:#f2970f'></i>
                         <br><br>
-                        Organizations I've Particapted With: 
+                        Organizations I've Participated With: 
                         <br><img src = "https://www.firstinspires.org/sites/default/files/uploads/resource_library/brand/thumbnails/FIRST-V.png">
                     </h3>
                 </div>
@@ -106,7 +106,7 @@
                         Come check out my first personal website that I created from 
                         scratch using HTML and CSS. It is my first ever personal portfolio and I've
                         used media queries to make it scalable for devices with a width of 390px or more. 
-                        Feel free to scurtinize my designs for ideas to improve them and. Learn a little about me 
+                        Feel free to scrutinize my designs for ways to improve them while learning a little about me 
                         along the way. 
                     </h4>
                 </div>
@@ -129,19 +129,32 @@
                     <br><h2>Gym Management System</h2><br>
                     <i class='bx bx-dumbbell' style='color: white'></i><br><br>
                     <h4>
-                        <a href="#">Check out the Website Here</a><br><br>
+                        <a href="https://github.com/bennyh2027/GymManagementSystem" target = "_blank">Check out the Website Here</a><br><br>
                         I'm a certified Gymrat so here's my own fantasized version of what my gym would look like. 
                         Using html and css for design, I incorporated php for functionality. My "fantasized" gym website
                         lets me create memberships, check a member's status such as if its expired or still valid, and 
                         track total profits. <br><br>
-                        *Note: Not yet Scalable. Built to a 1920 x 1080 Display* <br><br>
-                        *Would require you to have XAMPP installed to access phpmyadmin database to store users* 
+                        *Would require you to have XAMPP installed to access phpmyadmin database* 
                         <br><br>
                     </h4>
                 </div>
-                <br>
-            </div>
 
+                <div>
+                    <br><h2>Fast Food Business Order System</h2><br>
+                    <i class='bx bx-restaurant' style ='color: white'></i></i><br><br>
+                    <h4>
+                        <a href="https://github.com/bennyh2027/FastFoodBusiness" target = "_blank">Check out the Ordering System Here</a><br><br>
+                        Here is my own version of an online ordering system for a fast food restaurant. You can view the Home Page where you 
+                        can see opening times, details about the restaurant, etc. Feel free to browse the menu and place orders for a variety of 
+                        food options. All your orders is placed in your cart and will show as an order summary on the checkout page. kind of like Amazon
+                        but for a fast food restaurant! <br><br>
+                        *Would require you to have XAMPP installed to access phpmyadmin database*
+                        <br><br>
+                    </h4>
+                </div>
+                
+            </div>
+            <br>
             <!------Contact Section------>
             <div id = "contactSection">
                 <br>
@@ -178,5 +191,38 @@
         </div>    
 
     </body>
-	
+
+    <script>
+
+    document.addEventListener('contextmenu', function(stopRightClick) {
+			stopRightClick.preventDefault();
+		});
+
+		// stops different ctrl key combinations to inspect 
+		document.addEventListener('keydown', function(Keys) {
+			if (Keys.ctrlKey && (Keys.key === 'u' || Keys.key === 'U' || Keys.key === 's' || Keys.key === 'S' || Keys.key === 'a' || Keys.key === 'A' || Keys.key === 'p' || Keys.key === 'P')) {
+				Keys.preventDefault();
+			}
+
+			// Blocks F12 (Developer Tools)
+			if (e.key === 'F12') {
+				e.preventDefault();
+			}
+
+			// Blocks Ctrl+Shift+I (Inspect Element)
+			if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+				e.preventDefault();
+			}
+
+			// Blocks Ctrl+Shift+C (Inspect Element)
+			if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+				e.preventDefault();
+			}
+
+			// Blocks Ctrl+Shift+J (Open Console)
+			if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+				e.preventDefault();
+			}
+		});
+	</script>
 </html> 
